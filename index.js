@@ -1,4 +1,4 @@
-module.exports = function(template, locals) {
-  return require('handlebars').compile(template)(locals);
+module.exports = function(template, locals, callback) {
+  callback(require('handlebars').compile(template)(locals));
 };
 
